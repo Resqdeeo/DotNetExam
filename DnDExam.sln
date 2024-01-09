@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDExam", "DnDExam\DnDExam.csproj", "{1D209104-FEFD-4F05-A778-98FBFEA69099}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{05375684-AD6D-437A-ACAE-A2DBB8313DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseProj", "DatabaseProj\DatabaseProj.csproj", "{E883ADBE-BE27-4E20-B307-235E85A6672E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1D209104-FEFD-4F05-A778-98FBFEA69099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D209104-FEFD-4F05-A778-98FBFEA69099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D209104-FEFD-4F05-A778-98FBFEA69099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D209104-FEFD-4F05-A778-98FBFEA69099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05375684-AD6D-437A-ACAE-A2DBB8313DAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05375684-AD6D-437A-ACAE-A2DBB8313DAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05375684-AD6D-437A-ACAE-A2DBB8313DAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05375684-AD6D-437A-ACAE-A2DBB8313DAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E883ADBE-BE27-4E20-B307-235E85A6672E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E883ADBE-BE27-4E20-B307-235E85A6672E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E883ADBE-BE27-4E20-B307-235E85A6672E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E883ADBE-BE27-4E20-B307-235E85A6672E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

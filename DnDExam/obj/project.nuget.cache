@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "kTB2EWaG5p1WWkEmnXNtsihsDPjYS6Q5a7K5Y75WFzaqOGWtGFUvuqKD/pGQH5wkH8Jl+eDBPAIb8pjVJAdVdw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Vlaze\\RiderProjects\\DnDExam\\DnDExam\\DnDExam.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Vlaze\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

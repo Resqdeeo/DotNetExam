@@ -1,0 +1,91 @@
+﻿@model DnDExam.Models.GameViewModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="game">
+    <div id="log">
+        @if (Model.Monster is not null)
+        {
+            <h2>Your enemy:</h2>
+            <p>
+                <strong>Name: </strong> @Model.Monster.Name
+            </p>
+            <p>
+                <strong>HealthPoints: </strong> @Model.Monster.HealthPoints
+            </p>
+            <p>
+                <strong>AttackModifier: </strong> @Model.Monster.AttackModifier
+            </p>
+            <p>
+                <strong>AttackPerRound: </strong> @Model.Monster.AttackPerRound
+            </p>
+            <p>
+                <strong>Damage: </strong> @Model.Monster.Damage
+            </p>
+            <p>
+                <strong>DamageModifier: </strong> @Model.Monster.DamageModifier
+            </p>
+            <p>
+                <strong>Ac: </strong> @Model.Monster.Ac
+            </p>
+        }
+        
+        @if (Model.FightLog is not null)
+        {
+            <h2>Log of battle</h2>
+            @foreach (var item in Model.FightLog)
+            {
+                <p>@item</p>
+            }
+        }
+        
+        <div class="form-group">
+            <form asp-action="Game" asp-controller="Game">
+                <div>
+                    @if (Model is { IsPlayerLose: true, Monster: not null})
+                    {
+                        <h3 style="color: darkred">You lost!</h3>
+                        <button disabled type="submit" style="margin: 5px">Looser!</button>
+                    }
+                    else
+                    {
+                        <button type="submit" style="margin: 5px">Continue fight!</button>
+                    }
+                </div>
+                
+                <div>
+                    <div>
+                        <input type="text" aria-required="true" placeholder="nickname" name="name" value="@Model.Player!.Name" required/>
+                    </div>
+                    <div>
+                        <input type="text" aria-required="true" placeholder="health-points" name="hp" value="@Model.Player!.HealthPoints" required/>
+                    </div>
+                    <div>
+                        <input type="text" aria-required="true" placeholder="attack-modifier +" name="attackModifier" value="@Model.Player!.AttackModifier" required/>
+                    </div>
+                    <div>
+                        <input type="text" aria-required="true" placeholder="attack per round" name="apr" value="@Model.Player!.AttackPerRound" required/>
+                    </div>
+                    <div>
+                        <input type="text" aria-required="true" placeholder="damage" name="damage" value="@Model.Player!.Damage" required/>
+                    </div>
+                    <div>
+                        <input type="text" aria-required="true" placeholder="damage-modifier +" name="damageModifier" value="@Model.Player!.DamageModifier" required/>
+                    </div>
+                    <div>
+                        <input type="text" aria-required="true" placeholder="ac" name="ac" value="@Model.Player!.Ac" required/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="NewBattle">
+        <form asp-controller="Home" asp-action="Index">
+            <button type="submit" style="margin: 5px">Start new Fight?</button>
+        </form>
+    </div>
+    
+</div>
