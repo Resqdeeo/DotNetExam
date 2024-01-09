@@ -6,32 +6,62 @@
 
 <div class="game">
     <div id="log">
-        @if (Model.Monster is not null)
-        {
-            <h2>Your enemy:</h2>
-            <p>
-                <strong>Name: </strong> @Model.Monster.Name
-            </p>
-            <p>
-                <strong>HealthPoints: </strong> @Model.Monster.HealthPoints
-            </p>
-            <p>
-                <strong>AttackModifier: </strong> @Model.Monster.AttackModifier
-            </p>
-            <p>
-                <strong>AttackPerRound: </strong> @Model.Monster.AttackPerRound
-            </p>
-            <p>
-                <strong>Damage: </strong> @Model.Monster.Damage
-            </p>
-            <p>
-                <strong>DamageModifier: </strong> @Model.Monster.DamageModifier
-            </p>
-            <p>
-                <strong>Ac: </strong> @Model.Monster.Ac
-            </p>
-        }
-        
+        <div class="monster">
+            @if (Model.Monster is not null)
+            {
+                <h2>Your enemy:</h2>
+                <p>
+                    <strong>Name: </strong> @Model.Monster.Name
+                </p>
+                <p>
+                    <strong>HealthPoints: </strong> @Model.Monster.HealthPoints
+                </p>
+                <p>
+                    <strong>AttackModifier: </strong> @Model.Monster.AttackModifier
+                </p>
+                <p>
+                    <strong>AttackPerRound: </strong> @Model.Monster.AttackPerRound
+                </p>
+                <p>
+                    <strong>Damage: </strong> @Model.Monster.Damage
+                </p>
+                <p>
+                    <strong>DamageModifier: </strong> @Model.Monster.DamageModifier
+                </p>
+                <p>
+                    <strong>Ac: </strong> @Model.Monster.Ac
+                </p>
+            }
+        </div>
+
+        <div class="player" style="margin-left: 400px; margin-top: -324px;">
+            @if (Model.Player is not null)
+            {
+                <h2>You:</h2>
+                <p>
+                    <strong>Name: </strong> @Model.Player!.Name
+                </p>
+                <p>
+                    <strong>HealthPoints: </strong> @Model.Player!.HealthPoints
+                </p>
+                <p>
+                    <strong>AttackModifier: </strong> @Model.Player!.AttackModifier
+                </p>
+                <p>
+                    <strong>AttackPerRound: </strong> @Model.Player!.AttackPerRound
+                </p>
+                <p>
+                    <strong>Damage: </strong> @Model.Player!.Damage
+                </p>
+                <p>
+                    <strong>DamageModifier: </strong> @Model.Player!.DamageModifier
+                </p>
+                <p>
+                    <strong>Ac: </strong> @Model.Player!.Ac
+                </p>
+            }
+        </div>
+            
         @if (Model.FightLog is not null)
         {
             <h2>Log of battle</h2>
@@ -40,7 +70,7 @@
                 <p>@item</p>
             }
         }
-        
+
         <div class="form-group">
             <form asp-action="Game" asp-controller="Game">
                 <div>
@@ -54,7 +84,7 @@
                         <button type="submit" style="margin: 5px">Continue fight!</button>
                     }
                 </div>
-                
+
                 <div>
                     <div>
                         <input type="text" aria-required="true" placeholder="nickname" name="name" value="@Model.Player!.Name" required/>
@@ -84,7 +114,7 @@
     
     <div class="NewBattle">
         <form asp-controller="Home" asp-action="Index">
-            <button type="submit" style="margin: 5px">Start new Fight?</button>
+            <button type="submit" style="margin: 7px">Start new Fight?</button>
         </form>
     </div>
     
